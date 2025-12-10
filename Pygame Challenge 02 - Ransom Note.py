@@ -58,6 +58,7 @@ WHITE = (255,255,255)
 GREEN = (0,255,0)
 RED = (255,0,0)
 BLUE = (0,0,255)
+BLACK = (0,0,0)
 #-----------------------------------------#
 
 
@@ -81,31 +82,40 @@ while running:
     window.fill(WHITE)
 #-----------------------------------------#
 
+#-----------------------------SHAPES-------------------------------------#
 
-#-----------------------------RECTANGLES-------------------------------------#
-    y = 60
+#------------------LIVE CODE--------------#
 
-    while y <= windowHeight:
+    pygame.draw.rect(window, GREEN, (100,70,120,100)) #Draws Rectangle
 
-        pygame.draw.rect(window, GREEN, (100,y,120,100))
+    pygame.draw.polygon(window, BLACK, ((235, 60),(400, 80),(300,160))) #Draws Triangle
 
-        y += 660 #spacing of the pattern
+    pygame.draw.circle(window, BLUE, (480, 60), 60) #Draws Circle
 
-    y = 180
+    pygame.draw.polygon(window, RED, ((600, 60), (660, 90), (700,160), (580, 160))) #Draws Trapezoid
 
-    while y <= windowHeight:
+#----------------------------------------#
 
-        pygame.draw.rect(window, RED, (100,y,60,50))
+#----------------LOVE CODE-------------------#
 
-        y += 540 #spacing of the pattern
+    pygame.draw.cicle()
+    pygame.draw.rect(window, RED, (100,180,60,50))
+    pygame.draw.polygon()
+    pygame.draw.rect()
 
-    y = 300
+#------------------------------------------#
 
-    while y <= windowHeight:
+#------------LAUGH CODE--------------------#
 
-        pygame.draw.rect(window, BLUE, (100,y,120,100))
+    pygame.draw.rect(window, BLUE, (100,y,120,100))
+    pygame.draw.polygon()
+    pygame.draw.polygon()
+    pygame.draw.circle ()
+    pygame.draw.rect ()
+                     
 
-        y += 429 #spacing of the pattern
+#------------------------------------------#
+
 #---------Display-------------------------------------------------------------#
     pygame.display.flip()
     clock.tick(60)

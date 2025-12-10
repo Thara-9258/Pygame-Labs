@@ -40,6 +40,74 @@
 # Upload your code to github when finished
 # 
 # Good luck!
-#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------#
 
 
+
+#-------------------Setup-----------------------------------------------------#
+import pygame
+pygame.init ()
+
+window = pygame.display.set_mode((720, 470))
+clock = pygame.time.Clock()
+#----------------------------------------#
+
+
+#----------Declaring Colors---------------------------------------------------#
+WHITE = (255,255,255)
+GREEN = (0,255,0)
+RED = (255,0,0)
+BLUE = (0,0,255)
+#-----------------------------------------#
+
+
+#---------Declaring width and Height------------------------------------------#
+windowWidth = 720
+windowHeight = 720
+#-----------------------------------------#
+
+
+#---------Game Loop-----------------------------------------------------------#
+running = True
+while running:
+#----------------------------------------#
+
+
+#-------------------------------EVENTS----------------------------------------# 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+       
+    window.fill(WHITE)
+#-----------------------------------------#
+
+
+#-----------------------------RECTANGLES-------------------------------------#
+    y = 60
+
+    while y <= windowHeight:
+
+        pygame.draw.rect(window, GREEN, (100,y,120,100))
+
+        y += 660 #spacing of the pattern
+
+    y = 180
+
+    while y <= windowHeight:
+
+        pygame.draw.rect(window, RED, (100,y,60,50))
+
+        y += 540 #spacing of the pattern
+
+    y = 300
+
+    while y <= windowHeight:
+
+        pygame.draw.rect(window, BLUE, (100,y,120,100))
+
+        y += 429 #spacing of the pattern
+#---------Display-------------------------------------------------------------#
+    pygame.display.flip()
+    clock.tick(60)
+#----------------------------------------#
+   

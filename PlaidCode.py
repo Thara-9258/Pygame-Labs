@@ -17,6 +17,7 @@ DARK_PURPLE = (62, 37, 99)
 VIOLET_PURPLE = (157, 60, 201)
 DARK_PINK = (184, 66, 154)
 PERWINKLE = (181, 190, 245)
+NATURE_GREEN = (50, 168, 82)
 
 #---------Declaring width and Height--------------#
 windowWidth = 720
@@ -42,7 +43,6 @@ while running:
 
         y += 40 #spacing of the pattern
 
-
 #-------------Vertical Lines----------------#
     x = 0
     
@@ -51,16 +51,14 @@ while running:
         pygame.draw.line(window, DARK_PURPLE, (x, 0), (x, windowHeight), 20)
         pygame.draw.line(window, VIOLET_PURPLE, (x+20, 0), (x+20, windowHeight), 5)
         
-        x += 40 #spacing of then pattern
-#------------Diaganol Lines------------------#
+        x += 40 #spacing of the pattern
+#-----------------Horizontal Line---------#
 
-#    start_x = 0
-#    start_y = 0 
+    while y <= windowHeight:
 
-#    while start_x <= windowWidth:
-#        pygame.draw.line(window, PERWINKLE, (start_x,0), (start_x+windowHeight, windowHeight), 10)
+        pygame.draw.line(window, NATURE_GREEN, (0, y,), (windowWidth, y), 10)
 
-#        start_x += 40
+        y += 20 #spacing of the pattern
 
 #---------Display------------------------#
     pygame.display.flip()

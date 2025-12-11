@@ -44,45 +44,45 @@
 
 
 
-#-------------------Setup-----------------------------------------------------#
+#-------------------Setup----------------------------------------------------------------------------------#
 import pygame
 pygame.init ()
 
-window = pygame.display.set_mode((720, 470))
+window = pygame.display.set_mode((780, 470))
 clock = pygame.time.Clock()
-#----------------------------------------#
+#----------------------------------------------------------------------------------------------------------#
 
 
-#----------Declaring Colors---------------------------------------------------#
-WHITE = (255,255,255)
+#----------Declaring Colors--------------------------------------------------------------------------------#
 GREEN = (0,255,0)
 RED = (255,0,0)
 BLUE = (0,0,255)
 BLACK = (0,0,0)
-#-----------------------------------------#
+PALE = (232, 195, 146)
+#----------------------------------------------------------------------------------------------------------#
 
 
-#---------Declaring width and Height------------------------------------------#
-windowWidth = 720
-windowHeight = 720
-#-----------------------------------------#
+#---------Declaring width and Height------------------------------------------------------------------------#
+windowWidth = 780
+windowHeight = 470
+#-----------------------------------------------------------------------------------------------------------#
 
 
-#---------Game Loop-----------------------------------------------------------#
+#---------Game Loop-----------------------------------------------------------------------------------------#
 running = True
 while running:
-#----------------------------------------#
+#-----------------------------------------------------------------------------------------------------------#
 
 
-#-------------------------------EVENTS----------------------------------------# 
+#-------------------------------EVENTS----------------------------------------------------------------------# 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
        
-    window.fill(WHITE)
-#-----------------------------------------#
+    window.fill(PALE)
+#-----------------------------------------------------------------------------------------------------------#
 
-#-----------------------------SHAPES-------------------------------------#
+#-----------------------------SHAPES------------------------------------------------------------------------#
 
 #------------------LIVE CODE--------------#
 
@@ -98,26 +98,79 @@ while running:
 
 #----------------LOVE CODE-------------------#
 
-    pygame.draw.cicle()
-    pygame.draw.rect(window, RED, (100,180,60,50))
-    pygame.draw.polygon()
-    pygame.draw.rect()
+    pygame.draw.circle(window, BLUE, (250, 240), 80) #Draws Circle
+    pygame.draw.rect(window, RED, (80,180,60,50)) #Draws Rectangle
+    pygame.draw.polygon(window, GREEN, ((350,170), (500, 170), (540, 230), (350, 330))) #Draws Trapezoid
 
 #------------------------------------------#
 
 #------------LAUGH CODE--------------------#
 
-    pygame.draw.rect(window, BLUE, (100,y,120,100))
-    pygame.draw.polygon()
-    pygame.draw.polygon()
-    pygame.draw.circle ()
-    pygame.draw.rect ()
-                     
+    pygame.draw.rect(window, BLACK, (240,340,300,100))
 
 #------------------------------------------#
 
-#---------Display-------------------------------------------------------------#
+#-----------------------------------------------------------------------------------------------------------#
+
+#---------------------------------------FONTS----------------------------------------------------------------#
+
+    font = pygame.font.Font('Christmas Buttermilk.otf', 106)
+    Letter = "L"
+    renderedText = font.render(Letter, 1, pygame.Color("blue"))
+    window.blit(renderedText, (145,84))
+    #prints letter "L" in Christmas Buttermilk font
+
+    font = pygame.font.Font('Super Chiby.ttf', 80)
+    Letter = "I"
+    renderedText = font.render(Letter, 1, pygame.Color("green"))
+    window.blit(renderedText, (290,64))
+    #prints letter "I" in Super Chiby Font
+
+    font = pygame.font.Font('JMH Typewriter-Black.otf', 80)
+    Letter = "V"
+    renderedText = font.render(Letter, 1, pygame.Color("red"))
+    window.blit(renderedText, (450,24))
+    #prints letter "V" in JMH Typewriter-Black Font
+
+    font = pygame.font.Font('LEMON.otf', 80)
+    Letter = "E"
+    renderedText = font.render(Letter, 1, pygame.Color("green"))
+    window.blit(renderedText, (610,64))
+    #prints letter "E" in LEMON Font
+
+    font = pygame.font.Font('Christmas Buttermilk.otf', 67)
+    Letter = "L"
+    renderedText = font.render(Letter, 1, pygame.Color("green"))
+    window.blit(renderedText, (100,180))
+    #prints letter "L" in Christmas Buttermilk font
+
+    font = pygame.font.Font('LEMON.otf', 130)
+    Letter = "O"
+    renderedText = font.render(Letter, 1, pygame.Color("green"))
+    window.blit(renderedText, (210,164))
+    #prints letter "O" in LEMON Font
+
+    font = pygame.font.Font('Super Chiby.ttf', 80)
+    Letter = "V"
+    renderedText = font.render(Letter, 1, pygame.Color("red"))
+    window.blit(renderedText, (390,180))
+    #prints letter "V" in Super Chiby Font
+
+    font = pygame.font.Font('JMH Typewriter-Black.otf', 80)
+    Letter = "E"
+    renderedText = font.render(Letter, 1, pygame.Color("blue"))
+    window.blit(renderedText, (580,200))
+    #prints letter "E" in JMH Typewriter-Black Font
+
+    font = pygame.font.Font('Christmas Calling-Personal Use.otf', 80)
+    Letter = "LAUGH"
+    renderedText = font.render(Letter, 1, pygame.Color("purple"))
+    window.blit(renderedText, (300,355))
+    #prints "LAUGH" in Chrisstmas Calling Font
+
+#---------Display--------------------------------------------------------------------------------------------#
     pygame.display.flip()
     clock.tick(60)
-#----------------------------------------#
+#------------------------------------------------------------------------------------------------------------#
+
    
